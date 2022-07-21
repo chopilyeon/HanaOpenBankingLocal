@@ -1,0 +1,69 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+	<jsp:include page="/jsp/include/topAndSide.jsp" />
+	
+	<section>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	</section>
+
+
+
+
+
+
+
+
+	<jsp:include page="/jsp/include/footer.jsp" />
+	
+	
+	
+	
+	
+	
+	
+	
+	
+ <script src="/OpenBanking/resources/js/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="/OpenBanking/resources/js/bootstrap.bundle.min.js"></script>
+    <script src="/OpenBanking/resources/js/app-style-switcher.js"></script>
+    <script src="/OpenBanking/resources/js/jquery.sparkline.min.js"></script>
+    <!--Wave Effects -->
+    <script src="/OpenBanking/resources/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="/OpenBanking/resources/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="/OpenBanking/resources/js/custom.js"></script>
+    <!--This page JavaScript -->
+    <!--chartis chart-->
+    <script src="/OpenBanking/resources/js/chartist.min.js"></script>
+    <script src="/OpenBanking/resources/js/chartist-plugin-tooltip.min.js"></script>
+    <script src="/OpenBanking/resources/js/dashboard1.js"></script>
+
+
+	
+	
+</body>
+</html>

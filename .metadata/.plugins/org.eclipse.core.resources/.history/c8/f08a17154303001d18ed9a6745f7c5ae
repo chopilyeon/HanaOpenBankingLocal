@@ -1,0 +1,25 @@
+package kr.ac.kopo.member.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.ac.kopo.controller.Controller;
+
+public class JoinProcessController implements Controller {
+
+	@Override
+	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		request.setCharacterEncoding("utf-8");
+		String name = request.getParameter("name");
+		String identity1 = request.getParameter("identity_1");
+		String identity2 = request.getParameter("identity_1");
+		
+		
+		
+		
+		
+		return null;
+	}
+
+}

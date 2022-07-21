@@ -1,0 +1,96 @@
+package kr.ac.kopo.bank.dao;
+
+import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.session.SqlSession;
+
+import kr.ac.kopo.MyConfig;
+import kr.ac.kopo.bank.vo.BankVO;
+
+public class BankDAO {
+	private SqlSession session;
+
+	
+	
+	
+	public BankDAO() {
+		session  = new MyConfig().getInstance();
+		System.out.println("session : "+ session);
+	}
+	
+	public void insertAccount(BankVO bankvo) {
+		session.insert("dao.BankDAO.insertBank",bankvo);
+		session.commit();
+		
+	}
+	
+	public List<BankVO> checkAccount(BankVO bankVO){
+		List<BankVO> list = session.selectList("dao.BankDAO.checkoutBank",bankVO);
+		System.out.println(list);
+		return list;
+	}
+	
+	public List<BankVO> checkBKBANKAccount(BankVO bankVO){
+		List<BankVO> list = session.selectList("dao.BankDAO.checkoutBKBank",bankVO);
+		System.out.println(list);
+		return list;
+	}
+	
+	public List<BankVO> checkJBBANKAccount(BankVO bankVO){
+		List<BankVO> list = session.selectList("dao.BankDAO.checkoutJBBank",bankVO);
+		System.out.println(list);
+		return list;
+	}
+	
+	public List<BankVO> checkJHBANKAccount(BankVO bankVO){
+		List<BankVO> list = session.selectList("dao.BankDAO.checkoutJHBank",bankVO);
+		System.out.println(list);
+		return list;
+	}
+	
+	
+	public String checkAccountBANK(String accountNumber) {
+		String bankCode=session.selectOne("dao.BankDAO.checkAccountBANK",accountNumber);
+		
+		return bankCode;
+	}
+	
+	
+	public String checkAccountBKBANK(String accountNumber) {
+		String bankCode=session.selectOne("dao.BankDAO.checkAccountBKBANK",accountNumber);
+		
+		return bankCode;
+	}
+	
+	
+	public String checkAccountJBBANK(String accountNumber) {
+		String bankCode=session.selectOne("dao.BankDAO.checkAccountJBBANK",accountNumber);
+		
+		return bankCode;
+	}
+	
+
+	public String checkAccountJHBANK(String accountNumber) {
+		String bankCode=session.selectOne("dao.BankDAO.checkAccountJHBANK",accountNumber);
+		
+		return bankCode;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	public void transferToOtherAccount(Map map) {
+		session.update("dao.BankDAO.transferToOtherAccount",map);		
+	}
+	
+	
+	
+	
+	
+	
+}

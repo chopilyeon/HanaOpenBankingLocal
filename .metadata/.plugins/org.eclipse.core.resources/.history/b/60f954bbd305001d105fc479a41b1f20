@@ -1,0 +1,16 @@
+package kr.ac.kopo.transfer.vo;
+
+public class TransferVO {
+	private String depositBank;
+	private String insertBank;
+	private String depositName;
+	private String withrawalAccount;
+	private String depositRecipient;
+	private String depositAccount;
+	private int remittance;
+	private String tranDate;
+	
+	
+	
+
+}

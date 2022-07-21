@@ -1,0 +1,7 @@
+
+7월 20, 2022 09:27:52.594 NEW SESSION
+7월 20, 2022 09:27:52.594 [7052:4408:0720/092752.594:ERROR:device_event_log_impl.cc(214)] [09:27:52.593] Bluetooth: bluetooth_adapter_winrt.cc:1074 Getting Default Adapter failed.
+7월 20, 2022 09:28:50.491 [7052:5796:0720/092850.491:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+7월 20, 2022 14:28:50.00 [7052:260:0720/142849.999:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater
+7월 20, 2022 15:33:03.315 [7052:4408:0720/153303.314:ERROR:device_event_log_impl.cc(214)] [15:33:03.315] USB: usb_service_win.cc:104 SetupDiGetDeviceProperty({{A45C254E-DF1C-4EFD-8020-67D146A850E0}, 6}) failed: 요소가 없습니다. (0x490)
+7월 20, 2022 19:28:49.827 [7052:5648:0720/192849.827:ERROR:util.cc(127)] Can't create base directory: C:\Program Files\Google\GoogleUpdater

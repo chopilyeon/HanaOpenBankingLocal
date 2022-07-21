@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+body,h2{
+	font-family: 'Libre Baskerville', serif;
+}
+
+
+
+.onlyfor{
+	background:url('../images/city.jpg');
+	background-size:cover;
+	
+}
+
+
+
+
+.onlyfor1{
+	background:url('../images/river.jpg');
+	background-size:cover;
+	
+}
+
+
+
+
+section{
+	min-height:800px;
+	
+}
+
+.carousel-item{
+	height:900px;
+}
+
+
+
+.carousel-image-1{
+	background:url('/OpenBanking/resources/images/city1.jpg');
+	background-size:cover;
+}
+
+.carousel-image-2{
+		background:url('/OpenBanking/resources/images/picture2.jpg');
+		background-size:cover;
+}
+
+.carousel-image-3{
+	
+		background:url('/OpenBanking/resources/images/coffee.jpg');
+		background-size:cover;
+}

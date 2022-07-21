@@ -1,0 +1,17 @@
+package kr.ac.kopo.bankCode.service;
+
+import kr.ac.kopo.bankCode.dao.BankCodeDAO;
+import kr.ac.kopo.bankCode.vo.BankCodeVO;
+
+public class BankCodeService {
+	BankCodeDAO bankCodeDao;
+	
+	public BankCodeVO BankCodeCheck(BankCodeVO bankCodeVO) {
+	
+		bankCodeDao = new BankCodeDAO();
+		
+		BankCodeVO bankCodeVO = bankCodeDao.BankCodeCheck(bankCodeVO)
+		return null;
+	}
+
+}

@@ -1,0 +1,56 @@
+package kr.ac.kopo.member.controller;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import kr.ac.kopo.bank.service.BankService;
+import kr.ac.kopo.bank.vo.BankVO;
+import kr.ac.kopo.controller.Controller;
+import kr.ac.kopo.member.service.MemberService;
+import kr.ac.kopo.member.vo.MemberVO;
+
+public class LoginProcessController implements Controller {
+
+	@Override
+	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+		request.setCharacterEncoding("utf-8");
+		
+		String id = request.getParameter("id");
+		String password = request.getParameter("password");
+		
+		
+		System.out.println("id :" +id);
+		System.out.println("password :"+ password);
+		
+		MemberVO memberVO = new MemberVO(id,password);
+		BankVO bankVO = new BankVO(id);
+		
+		MemberService memberService = new MemberService();
+		BankService bankService = new BankService();
+		
+		MemberVO userVO=memberService.login(memberVO);
+		List<BankVO> bankList=bankService.ChekAccount(bankVO);
+		
+		if(userVO!=null) {
+			
+			HttpSession session = request.getSession();
+			session.setAttribute("userVO",userVO);
+			request.setAttribute("bankList", bankList);
+			System.out.println(userVO.toString());
+		
+			return "redirect:/welcome.do";
+		
+		}else {
+		
+			return "redirect:/loginFail.do";
+		}
+		
+	}
+		
+		
+}
+

@@ -1,0 +1,5 @@
+package kr.ac.kopo.transaction.Service;
+
+public class TransactionService {
+
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+   
+<mapper namespace="dao.TransactionDAO">
+
+<resultMap type="transactionVO" id="checkTransHistory">
+	    <result column ="withrawal_bank_name" property="withrawalBankName"/>
+		<result column ="deposit_bank_name" property="depositBankName"/>
+		<result column ="tran_num" property="tranNum"/>
+		<result column ="deposit_account_num" property="depositAccountNum"/>
+		<result column ="withrawal_account_num" property="withrawalAccountNum"/>
+		<result column ="deposit_name" property="depositName"/>
+		<result column ="withrawal_name" property="withrawalName"/>
+		<result column ="tran_amount" property="tranAmount"/>
+		<result column ="tran_date" property="tranDate"/>
+</resultMap>
+
+
+
+	
+	
+
+	<select id="checkTransaction" resultMap="checkTransHistory" parameterType="string">
+		 select 
+		 tran_num, 
+		 deposit_bank_name, 
+		 D.bank_name as withrawal_bank_name, 
+		 deposit_account_num, 
+		 withrawal_account_num, 
+		 tran_date,	
+		 withrawal_name, 
+		 deposit_name, 
+		 tran_amount
+		from  
+		(select B.bank_name as deposit_bank_name,tran_num,
+		deposit_account_num,withrawal_account_num,deposit_name,withrawal_name,deposit_bank_code,withrawal_bank_code,tran_amount,tran_date		
+		from transaction_history A, bank_code B		
+		 where A.deposit_bank_code = B.bank_code and phone_number=#{phoneNumber}) C, bank_code D
+		 where C.withrawal_bank_code = D.bank_code		
+	</select>
+
+
+
+
+
+	
+</mapper>

@@ -1,0 +1,54 @@
+package kr.ac.kopo.board.dao;
+
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+
+import kr.ac.kopo.MyConfig;
+import kr.ac.kopo.board.vo.BoardVO;
+
+public class BoardDAO {
+	private SqlSession session;
+	
+	public BoardDAO() {
+		session  = new MyConfig().getInstance();
+		System.out.println("session : "+ session);
+	}
+	
+	
+	public void insertBoard(BoardVO boardVO) {
+		
+		
+		session.insert("dao.BoardDAO.insertBoard",boardVO);
+		session.commit();
+
+		System.out.println("삽입 완료");
+	}
+
+	public void select() {
+		//BoardVO board = session.selectOne("dao.BoardDAO.selectAllBoard");
+		//갖고온 행이  몇개든지 1개만 갖고오게 됨 return type은 object임. 
+		List<BoardVO> boardList = session.selectList("dao.BoardDAO.selectAllBoard2");
+		
+		
+		for(BoardVO board:boardList) {
+			System.out.println(board);
+		}
+		
+	}	
+	
+	public void selectOne() {
+		BoardVO vo = new BoardVO();
+	
+		BoardVO board = session.selectOne("dao.BoardDAO.selectByNo3", vo);
+		System.out.println(board);
+		
+		
+	}
+	
+
+
+	
+	
+
+}

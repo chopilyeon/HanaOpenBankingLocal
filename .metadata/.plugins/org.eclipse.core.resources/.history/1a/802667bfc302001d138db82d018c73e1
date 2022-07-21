@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+body{
+	font-family: 'Arima', cursive;
+}
+
+
+
+.onlyfor{
+	background:url('../images/city.jpg');
+	background-size:cover;
+	
+}
+
+
+
+
+
+section{
+	min-height:800px;
+	
+}

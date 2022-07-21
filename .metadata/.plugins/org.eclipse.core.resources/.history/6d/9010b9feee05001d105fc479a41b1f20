@@ -1,0 +1,61 @@
+package kr.ac.kopo.bank.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.ac.kopo.bank.service.BankService;
+import kr.ac.kopo.controller.Controller;
+
+public class TransferToAnotherProcessingController implements Controller {
+
+	@Override
+	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		String depositBankCode;
+		String withrawalBankCode;
+		String insertBankCode;
+		String depositBankName = request.getParameter("depositBankName");
+		String depositAccount = request.getParameter("depositAccount");	
+		String withrawalAccount = request.getParameter("withrawalAccount");	
+		String tranAmount = request.getParameter("tranAmount");	
+		String depositName = request.getParameter("depositName");
+		String withrawalName = request.getParameter("withrawalName");
+		
+
+		if(depositBankName.equals("BYUNGKWAN BANK")) {
+			depositBankCode="2";
+		}else if(depositBankName.equals("JUNGBIN BANK")) {
+			depositBankCode="14";		
+		}else if(depositBankName.equals("JIHUN BANK")) {
+			depositBankCode="9";			
+		}else {
+			depositBankCode="20";
+		}
+		
+		
+		 Map<String,String> map = new HashMap<>();
+		 map.put("depositBankCode", depositBankCode);
+		 map.put("depositAccount", depositAccount);
+		 map.put("withrawalAccount", withrawalAccount);
+		 map.put("tranAmount", tranAmount);
+		 map.put("depositName",depositName);
+		 map.put("withrawalName", withrawalName);
+
+		 
+		 BankService bankService = new BankService();
+			
+			
+		
+		 bankService.transferToSameAccount(map);
+		
+		
+		
+		
+		
+		return null;
+	}
+
+}

@@ -1,0 +1,21 @@
+package kr.ac.kopo.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class BoardDetailController implements Controller {
+
+	@Override
+	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+
+		String first_boardNo = request.getParameter("boardNo");
+		int boardNo = Integer.parseInt(first_boardNo);
+		
+		
+		
+		
+		return "/jsp/board/detail.jsp";
+	}
+
+}

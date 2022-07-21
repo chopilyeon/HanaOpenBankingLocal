@@ -1,0 +1,11 @@
+@charset "UTF-8";
+.onlyfor{
+	background:url('../images/city.jpg');
+	background-size:cover;
+	
+}
+
+section{
+	min-height:800px;
+	
+}

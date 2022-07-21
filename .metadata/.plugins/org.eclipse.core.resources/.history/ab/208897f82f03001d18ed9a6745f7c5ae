@@ -1,0 +1,8 @@
+package kr.ac.kopo;
+
+public class MyBatisMain {
+	
+	BoardDAO dao = new BoardDAO();
+	dao.work();
+
+}

@@ -1,0 +1,14 @@
+package kr.ac.kopo.bank.vo;
+
+public class BankVO {
+	private String accountNumber;
+	private String id;
+	private String accountPassword;
+	private String bankCode;
+	private String bankRegDate;
+	private int balance;
+	private String openBanking;
+	private String bankAlias;
+	private int transferLimit;
+	
+}

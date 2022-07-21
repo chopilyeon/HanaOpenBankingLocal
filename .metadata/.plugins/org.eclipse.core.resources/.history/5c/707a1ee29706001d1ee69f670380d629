@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  
+   
+<mapper namespace="dao.TransactionDAO">
+
+<resultMap id="checkTranshistory" resultType="transactionVO">
+	   <result column ="no" property="no"/>
+		<result column ="title" property="title"/>
+		<result column ="writer" property="writer"/>
+		<result column ="content" property="content"/>
+		<result column ="view_cnt" property="viewCnt"/>
+		<result column ="reg_date" property="regDate"/>
+</resultMap>
+
+
+
+	
+	
+
+	<select id="checkTransaction" resultType="transactionVO" parameterType="string">
+		select 
+		D.bank_name as withrawalBankName, depositBankName, tranNum, depositAccountNum,withrawalAccountNum,depositName,withrawalName, depositBankCode,withrawalBankCode,tranAmount,tranDate	
+		from 
+		(select B.bank_name as deposit_bank_name,tran_num,
+		deposit_account_num,withrawal_account_num,deposit_name,withrawal_name,deposit_bank_code,withrawal_bank_code,tran_amount,tran_date		
+		from transaction_history A, bank_code B		
+		where A.deposit_bank_code = B.bank_code and phone_number=#{phoneNumber}) C, bank_code D
+		where C.withrawal_bank_code = D.bank_code		
+	</select>
+
+
+
+
+
+	
+</mapper>

@@ -1,0 +1,24 @@
+package kr.ac.kopo.bank.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.ac.kopo.controller.Controller;
+
+public class CheckTransactionController implements Controller {
+
+	@Override
+	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	
+		TransactionService transactionService = new TransactionService();
+		
+		
+		
+		
+		
+		
+		
+		return "/jsp/transaction/checkTransaction.jsp";
+	}
+
+}

@@ -1,0 +1,8 @@
+package kr.ac.kopo.bankCode.service;
+
+import kr.ac.kopo.bankCode.dao.BankCodeDAO;
+
+public class BankCodeService {
+	BankCodeDAO bankCodeDao;
+
+}

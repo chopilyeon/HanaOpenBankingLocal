@@ -1,0 +1,20 @@
+package kr.ac.kopo.transaction.dao;
+
+import org.apache.ibatis.session.SqlSession;
+
+public class TransactionDAO {
+	private SqlSession session;
+	
+	
+	public list<TransactionVO> checkoutTransaction(String phoneNumber){
+		
+		
+		session.
+		
+		return null;
+		
+	}
+	
+	
+
+}

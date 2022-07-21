@@ -1,0 +1,99 @@
+package kr.ac.kopo.bank.service;
+
+import java.util.List;
+import java.util.Map;
+
+import kr.ac.kopo.bank.dao.BankDAO;
+import kr.ac.kopo.bank.vo.BankVO;
+
+public class BankService {
+	
+	private BankDAO bankDao;
+
+	
+	
+	public void insertAccount(BankVO bankvo) {
+		bankDao=new BankDAO();
+		bankDao.insertAccount(bankvo);
+		
+	}
+	
+	
+	public List<BankVO> checkAccount(BankVO bankVO){
+		bankDao=new BankDAO();
+		List<BankVO> list = bankDao.checkAccount(bankVO);
+		System.out.println("list :"+list);
+		
+		return list;
+		
+	}
+
+	public BankVO checkAccountBANK(BankVO bankVO) {
+		bankDao=new BankDAO();
+		BankVO userVO = bankDao.checkAccountBANK(bankVO.getAccountNumber());
+		
+		return userVO;
+	}
+	
+
+	public String checkAccountBKBANK(BankVO bankVO) {
+		bankDao=new BankDAO();
+		BankVO userVO = bankDao.checkAccountBKBANK(bankVO);
+		
+		return userVO;
+	}
+	
+	
+	/*
+	 * public String checkAccountJBBANK(String accountNumber) { String
+	 * bankCode=bankDao.checkAccountBKBANK(accountNumber);
+	 * 
+	 * return bankCode; }
+	 * 
+	 * 
+	 * public String checkAccountJHBANK(String accountNumber) { String
+	 * bankCode=bankDao.checkAccountBKBANK(accountNumber);
+	 * 
+	 * return bankCode; }
+	 */
+
+	
+	public String checkBankName(String bankCode) {
+		bankDao=new BankDAO();
+		String bankName = bankDao.checkBankName(bankCode);
+ 
+ 		return bankName; 
+	}
+
+	
+		
+	
+	public void transferToOtherAccountAtWithrawal(Map map) {
+		bankDao=new BankDAO();
+		bankDao.transferToOtherAccountAtWithrawal(map);	
+	}
+	
+	
+	
+	public void transferToOtherAccountAllDifferent(Map map) {
+		bankDao=new BankDAO();
+		bankDao.transferToOtherAccountAllDifferent(map);
+		
+	}
+	
+
+	public void transferToOtherAccountAllSame(Map map) {
+		bankDao=new BankDAO();
+		bankDao.transferToOtherAccountAllSame(map);	
+	}
+	
+
+	public void transferToOtherAccountAtDeposit(Map map) {
+		bankDao=new BankDAO();
+		bankDao.transferToOtherAccountAtDeposit(map);	
+	}
+	
+	
+	
+	
+}

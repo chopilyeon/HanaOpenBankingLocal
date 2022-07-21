@@ -1,0 +1,34 @@
+package kr.ac.kopo.member.service;
+
+import kr.ac.kopo.member.dao.MemberDAO;
+import kr.ac.kopo.member.vo.MemberVO;
+
+public class MemberService {
+	
+	private MemberDAO memberDao;
+	
+	
+	public MemberService() {
+		memberDao = new MemberDAO();
+	}
+	
+	
+	public void join(MemberVO memberVO) {
+
+		memberDao.join(memberVO);
+		
+		
+	}
+	
+	public String login(MemberVO memberVO) {
+		
+		MemberVO= memberDao.login(memberVO);
+		System.out.println(id);
+		return id;
+	}
+	
+	
+	
+	
+
+}

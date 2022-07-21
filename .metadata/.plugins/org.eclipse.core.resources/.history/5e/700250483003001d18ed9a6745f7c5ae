@@ -1,0 +1,11 @@
+package kr.ac.kopo.board.VO;
+
+public class BoardVO {
+	private String id;
+	private int boardNum;
+	private String Title;
+	
+	
+	
+
+}

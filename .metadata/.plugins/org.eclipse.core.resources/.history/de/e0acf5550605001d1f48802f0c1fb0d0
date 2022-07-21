@@ -1,0 +1,5 @@
+package kr.ac.kopo.bankCode.vo;
+
+public class BankCodeVO {
+
+}

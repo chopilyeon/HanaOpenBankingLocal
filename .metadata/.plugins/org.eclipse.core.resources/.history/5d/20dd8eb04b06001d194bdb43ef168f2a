@@ -1,0 +1,13 @@
+package kr.ac.kopo.transaction.Service;
+
+import java.util.List;
+
+import kr.ac.kopo.transaction.vo.TransactionVO;
+
+public class TransactionService {
+	private TransactionDAO transactionDAO
+	
+	
+	public List<TransactionVO> checkoutTransaction(String phoneNumber)
+
+}

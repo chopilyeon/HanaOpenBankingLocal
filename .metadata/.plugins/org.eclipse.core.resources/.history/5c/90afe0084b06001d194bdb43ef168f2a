@@ -1,0 +1,18 @@
+package kr.ac.kopo.transaction.dao;
+
+public class TransactionDAO {
+	private Sqlsession session;
+	
+	
+	public list<TransactionVO> checkoutTransaction(String phoneNumber){
+		
+		
+		session.
+		
+		return null;
+		
+	}
+	
+	
+
+}

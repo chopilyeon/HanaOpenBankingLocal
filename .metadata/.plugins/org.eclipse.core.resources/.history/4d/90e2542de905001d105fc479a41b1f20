@@ -1,0 +1,71 @@
+package kr.ac.kopo.transaction.vo;
+
+public class TransactionVO {
+	private String depositBank;
+	private String insertBank;
+	private String depositName;
+	private String withrawalAccount;
+	private String depositRecipient;
+	private String depositAccount;
+	private int remittance;
+	private String tranDate;
+	
+	
+	public String getDepositBank() {
+		return depositBank;
+	}
+	public void setDepositBank(String depositBank) {
+		this.depositBank = depositBank;
+	}
+	public String getInsertBank() {
+		return insertBank;
+	}
+	public void setInsertBank(String insertBank) {
+		this.insertBank = insertBank;
+	}
+	public String getDepositName() {
+		return depositName;
+	}
+	public void setDepositName(String depositName) {
+		this.depositName = depositName;
+	}
+	public String getWithrawalAccount() {
+		return withrawalAccount;
+	}
+	public void setWithrawalAccount(String withrawalAccount) {
+		this.withrawalAccount = withrawalAccount;
+	}
+	public String getDepositRecipient() {
+		return depositRecipient;
+	}
+	public void setDepositRecipient(String depositRecipient) {
+		this.depositRecipient = depositRecipient;
+	}
+	public String getDepositAccount() {
+		return depositAccount;
+	}
+	public void setDepositAccount(String depositAccount) {
+		this.depositAccount = depositAccount;
+	}
+	public int getRemittance() {
+		return remittance;
+	}
+	public void setRemittance(int remittance) {
+		this.remittance = remittance;
+	}
+	public String getTranDate() {
+		return tranDate;
+	}
+	public void setTranDate(String tranDate) {
+		this.tranDate = tranDate;
+	}
+	@Override
+	public String toString() {
+		return "TransferVO [depositBank=" + depositBank + ", insertBank=" + insertBank + ", depositName=" + depositName
+				+ ", withrawalAccount=" + withrawalAccount + ", depositRecipient=" + depositRecipient
+				+ ", depositAccount=" + depositAccount + ", remittance=" + remittance + ", tranDate=" + tranDate + "]";
+	}
+	
+	
+
+}

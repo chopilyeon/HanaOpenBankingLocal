@@ -1,0 +1,85 @@
+package kr.ac.kopo.transaction.vo;
+
+public class TransactionVO {
+	private String depositBankCode;
+	private String insertBankCode;
+	private String depositName;
+	private String withrawalAccount;
+	private String depositRecipient;
+	private String depositAccount;
+	private int remittance;
+	private String tranDate;
+	
+	public String getDepositBankCode() {
+		return depositBankCode;
+	}
+	public void setDepositBankCode(String depositBankCode) {
+		this.depositBankCode = depositBankCode;
+	}
+	public String getInsertBankCode() {
+		return insertBankCode;
+	}
+	
+	public void setInsertBankCode(String insertBankCode) {
+		this.insertBankCode = insertBankCode;
+	}
+	public String getDepositName() {
+		return depositName;
+	}
+	public void setDepositName(String depositName) {
+		this.depositName = depositName;
+	}
+	public String getWithrawalAccount() {
+		return withrawalAccount;
+	}
+	public void setWithrawalAccount(String withrawalAccount) {
+		this.withrawalAccount = withrawalAccount;
+	}
+	public String getDepositRecipient() {
+		return depositRecipient;
+	}
+	public void setDepositRecipient(String depositRecipient) {
+		this.depositRecipient = depositRecipient;
+	}
+	public String getDepositAccount() {
+		return depositAccount;
+	}
+	public void setDepositAccount(String depositAccount) {
+		this.depositAccount = depositAccount;
+	}
+	public int getRemittance() {
+		return remittance;
+	}
+	public void setRemittance(int remittance) {
+		this.remittance = remittance;
+	}
+	public String getTranDate() {
+		return tranDate;
+	}
+	public void setTranDate(String tranDate) {
+		this.tranDate = tranDate;
+	}
+	@Override
+	public String toString() {
+		return "TransactionVO [depositBankCode=" + depositBankCode + ", insertBankCode=" + insertBankCode
+				+ ", depositName=" + depositName + ", withrawalAccount=" + withrawalAccount + ", depositRecipient="
+				+ depositRecipient + ", depositAccount=" + depositAccount + ", remittance=" + remittance + ", tranDate="
+				+ tranDate + "]";
+	}
+	
+	
+	public TransactionVO(String depositBankCode, String insertBankCode, String depositName, String withrawalAccount,
+			String depositRecipient, String depositAccount, int remittance, String tranDate) {
+		super();
+		this.depositBankCode = depositBankCode;
+		this.insertBankCode = insertBankCode;
+		this.depositName = depositName;
+		this.withrawalAccount = withrawalAccount;
+		this.depositRecipient = depositRecipient;
+		this.depositAccount = depositAccount;
+		this.remittance = remittance;
+		this.tranDate = tranDate;
+	}
+
+
+}

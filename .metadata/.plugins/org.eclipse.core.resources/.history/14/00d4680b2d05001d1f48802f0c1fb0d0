@@ -1,0 +1,31 @@
+package kr.ac.kopo.member.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import kr.ac.kopo.bank.service.BankService;
+import kr.ac.kopo.controller.Controller;
+import kr.ac.kopo.member.vo.MemberVO;
+
+public class DashBoardController implements Controller {
+
+	@Override
+	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		HttpSession session = request.getSession();
+		
+		
+		MemberVO memberVO = (MemberVO)request.getAttribute("userVO");
+		BankService bankService = new BankService();
+		bankService.CheckAccount(memberVO.getId());
+		
+		
+		
+		
+		
+		return "/jsp/board/dashboard.jsp";
+		
+	}
+
+}

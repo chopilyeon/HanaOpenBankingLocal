@@ -1,0 +1,84 @@
+package kr.ac.kopo.bank.service;
+
+import java.util.List;
+import java.util.Map;
+
+import kr.ac.kopo.bank.dao.BankDAO;
+import kr.ac.kopo.bank.vo.BankVO;
+
+public class BankService {
+	
+	private BankDAO bankDao;
+
+	
+	
+	public void insertAccount(BankVO bankvo) {
+		bankDao=new BankDAO();
+		bankDao.insertAccount(bankvo);
+		
+	}
+	
+	
+	public List<BankVO> checkAccount(BankVO userVO){
+		bankDao=new BankDAO();
+		List<BankVO> list = bankDao.checkAccount(userVO);
+		System.out.println("list :"+list);
+		
+		return list;
+		
+	}
+
+	public String checkAccountBANK(String accountNumber) {
+		String bankCode=bankDao.checkAccountBKBANK(accountNumber);
+		
+		return bankCode;
+	}
+	
+
+	public String checkAccountBKBANK(String accountNumber) {
+		String bankCode=bankDao.checkAccountBKBANK(accountNumber);
+		
+		return bankCode;
+	}
+	
+	
+	/*
+	 * public String checkAccountJBBANK(String accountNumber) { String
+	 * bankCode=bankDao.checkAccountBKBANK(accountNumber);
+	 * 
+	 * return bankCode; }
+	 * 
+	 * 
+	 * public String checkAccountJHBANK(String accountNumber) { String
+	 * bankCode=bankDao.checkAccountBKBANK(accountNumber);
+	 * 
+	 * return bankCode; }
+	 */
+
+	
+	public String checkBankName(String bankCode) {
+		bankDao=new BankDAO();
+		String bankName = bankDao.checkBankName(bankCode);
+ 
+ 		return bankName; 
+	}
+	
+	
+	public void transferToOtherAccountAtJAEHEE(Map map) {
+		bankDao=new BankDAO();
+		bankDao.transferToOtherAccountAtJAEHEE(map);	
+	}
+	
+	
+	
+	public void transferToOtherAccount(Map map) {
+		bankDao=new BankDAO();
+		bankDao.transferToOtherAccount(map);
+		
+	}
+	
+	
+	
+	
+	
+}

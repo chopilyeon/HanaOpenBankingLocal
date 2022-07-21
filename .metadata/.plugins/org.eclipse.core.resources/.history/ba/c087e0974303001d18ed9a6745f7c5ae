@@ -1,0 +1,51 @@
+package kr.ac.kopo.member.controller;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import kr.ac.kopo.controller.Controller;
+
+public class JoinProcessController implements Controller {
+
+	@Override
+	public String handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
+		
+		request.setCharacterEncoding("utf-8");
+		String name = request.getParameter("name");
+		String identity1 = request.getParameter("iden_number1");
+		String identity2 = request.getParameter("iden_number1");
+		String password = request.getParameter("password");
+		String zipCode = request.getParameter("zipCode");
+		String address = request.getParameter("address");
+		String detailAddress = request.getParameter("detailAdderess");
+		
+		
+		
+		name="zipCode">
+	<input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
+	<input type="text" id="sample6_address" placeholder="주소" name="address"><br>
+	<input type="text" id="sample6_detailAddress" placeholder="상세주소" name="detailAddress">
+	<input type="text" id="sample6_extraAddress" placeholder="참고항목" name="referAddress">
+</div>
+<br>
+<div class="row g-3">
+	<div>
+		휴대폰번호
+	</div>
+		<div class="col-sm">
+		     <input type="text" class="form-control" placeholder="010" aria-label="City" name="tel1">
+		</div>
+		<div class="col-sm">
+			 <input type="text" class="form-control" placeholder="0000" aria-label="State" name="tel2">
+		</div>
+		<div class="col-sm">
+		<input type="text" class="form-control" placeholder="0000" aria-label="Zip" name="tel3">
+		</div>
+</div>
+		
+		
+		
+		return null;
+	}
+
+}

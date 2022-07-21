@@ -1,0 +1,100 @@
+package kr.ac.kopo.transaction.vo;
+
+public class TransactionVO {
+	private String withrawalBankCode;
+	private String depositBankCode;
+	private String withrawalName;
+	private String withrawalAccountNumber;
+	private String depositName;
+	private String depositAccountNumber;
+	private int tranAmount;
+	private String tranDate;
+	private String depositBankName;
+	private String withrawalBankName;
+	public String getWithrawalBankCode() {
+		return withrawalBankCode;
+	}
+	public void setWithrawalBankCode(String withrawalBankCode) {
+		this.withrawalBankCode = withrawalBankCode;
+	}
+	public String getDepositBankCode() {
+		return depositBankCode;
+	}
+	public void setDepositBankCode(String depositBankCode) {
+		this.depositBankCode = depositBankCode;
+	}
+	public String getWithrawalName() {
+		return withrawalName;
+	}
+	public void setWithrawalName(String withrawalName) {
+		this.withrawalName = withrawalName;
+	}
+	public String getWithrawalAccountNumber() {
+		return withrawalAccountNumber;
+	}
+	public void setWithrawalAccountNumber(String withrawalAccountNumber) {
+		this.withrawalAccountNumber = withrawalAccountNumber;
+	}
+	public String getDepositName() {
+		return depositName;
+	}
+	public void setDepositName(String depositName) {
+		this.depositName = depositName;
+	}
+	public String getDepositAccountNumber() {
+		return depositAccountNumber;
+	}
+	public void setDepositAccountNumber(String depositAccountNumber) {
+		this.depositAccountNumber = depositAccountNumber;
+	}
+	public int getTranAmount() {
+		return tranAmount;
+	}
+	public void setTranAmount(int tranAmount) {
+		this.tranAmount = tranAmount;
+	}
+	public String getTranDate() {
+		return tranDate;
+	}
+	public void setTranDate(String tranDate) {
+		this.tranDate = tranDate;
+	}
+	public String getDepositBankName() {
+		return depositBankName;
+	}
+	public void setDepositBankName(String depositBankName) {
+		this.depositBankName = depositBankName;
+	}
+	public String getWithrawalBankName() {
+		return withrawalBankName;
+	}
+	public void setWithrawalBankName(String withrawalBankName) {
+		this.withrawalBankName = withrawalBankName;
+	}
+	@Override
+	public String toString() {
+		return "TransactionVO [withrawalBankCode=" + withrawalBankCode + ", depositBankCode=" + depositBankCode
+				+ ", withrawalName=" + withrawalName + ", withrawalAccountNumber=" + withrawalAccountNumber
+				+ ", depositName=" + depositName + ", depositAccountNumber=" + depositAccountNumber + ", tranAmount="
+				+ tranAmount + ", tranDate=" + tranDate + ", depositBankName=" + depositBankName
+				+ ", withrawalBankName=" + withrawalBankName + "]";
+	}
+	public TransactionVO(String withrawalBankCode, String depositBankCode, String withrawalName,
+			String withrawalAccountNumber, String depositName, String depositAccountNumber, int tranAmount,
+			String tranDate, String depositBankName, String withrawalBankName) {
+		super();
+		this.withrawalBankCode = withrawalBankCode;
+		this.depositBankCode = depositBankCode;
+		this.withrawalName = withrawalName;
+		this.withrawalAccountNumber = withrawalAccountNumber;
+		this.depositName = depositName;
+		this.depositAccountNumber = depositAccountNumber;
+		this.tranAmount = tranAmount;
+		this.tranDate = tranDate;
+		this.depositBankName = depositBankName;
+		this.withrawalBankName = withrawalBankName;
+	}
+	
+	
+
+}

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+ #my_modal {
+                display: none;
+                width: 300px;
+                padding: 20px 60px;
+                background-color: #fefefe;
+                border: 1px solid #888;
+                border-radius: 3px;
+}
+
+
+ #my_modal1 {
+                display: none;
+                width: 300px;
+                padding: 20px 60px;
+                background-color: #fefefe;
+                border: 1px solid #888;
+                border-radius: 3px;
+}
+
+
+
+
+
+
+
+
+#my_modal2 .modal_close_btn2 {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+}

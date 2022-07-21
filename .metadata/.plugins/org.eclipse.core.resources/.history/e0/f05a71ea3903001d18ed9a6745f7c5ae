@@ -1,0 +1,24 @@
+package kr.ac.kopo.board.VO;
+
+public class BoardVO {
+	private String id;
+	private int boardNum;
+	private String title;
+	private String content;
+	
+	public BoardVO(String id, int boardNum, String title, String content) {
+		super();
+		this.id = id;
+		this.boardNum = boardNum;
+		this.title = title;
+		this.content = content;
+	}
+
+	public BoardVO() {
+		super();
+	}
+	
+	
+	
+
+}

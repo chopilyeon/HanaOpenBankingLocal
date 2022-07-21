@@ -1,0 +1,25 @@
+package kr.ac.kopo.bankCode.dao;
+
+import org.apache.ibatis.session.SqlSession;
+
+import kr.ac.kopo.MyConfig;
+import kr.ac.kopo.bankCode.vo.BankCodeVO;
+
+public class BankCodeDAO {
+	
+	private SqlSession session;
+
+	
+	public BankCodeDAO() {
+		session  = new MyConfig().getInstance();
+		System.out.println("session : "+ session);
+	}
+
+	
+	public BankCodeVO BankCodeCheck() {
+		
+		
+		return null;
+	}
+	
+}

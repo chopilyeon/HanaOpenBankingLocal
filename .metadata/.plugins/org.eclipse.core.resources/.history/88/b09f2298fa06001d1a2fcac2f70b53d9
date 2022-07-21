@@ -1,0 +1,34 @@
+package kr.ac.kopo.transaction.dao;
+
+import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.session.SqlSession;
+
+import kr.ac.kopo.MyConfig;
+import kr.ac.kopo.transaction.vo.TransactionVO;
+
+public class TransactionDAO {
+	private SqlSession session;
+	
+	
+	public TransactionDAO() {
+		session  = new MyConfig().getInstance();
+		System.out.println("session : "+ session);
+	}
+	
+	public List<TransactionVO> checkoutTransaction(String phoneNumber) {	 		
+			 
+//		 List<TransactionVO> transactionList = session.selectList("dao.TransactionDAO.checkTransaction",phoneNumber);	 
+		 List<Map<String, String>> transactionList = session.selectList("dao.TransactionDAO.checkTransaction",phoneNumber);	 
+		 System.out.println(transactionList.toString());
+		 	 
+		 return transactionList;	 
+		}
+	
+	
+}
+
+
+
+
